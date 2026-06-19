@@ -1,0 +1,80 @@
+{
+  "accuracy": "93.3",
+  "results": [
+    {
+      "id": "msg-012",
+      "pass": true,
+      "reasoning": "All triage fields are accurate and well-reasoned. The category 'Bug' is appropriate as this is a security vulnerability in the integration. Urgency 'Critical' is correct given the explicit URGENT flag, production impact, and potential security compromise. Sentiment 'Negative' accurately reflects the alarmed and distressed tone. The summary concisely captures the key details: API key exposure, plaintext logs, production impact, and escalation request. requiresHuman=true is the only appropriate choice for a security incident of this nature."
+    },
+    {
+      "id": "msg-010",
+      "pass": true,
+      "reasoning": "The triage output is accurate and sensible. The category 'Support' is correct as this is a technical support issue (login/authentication problem). The urgency 'High' is justified because the user explicitly states it is urgent and needed for work. The sentiment 'Negative' is appropriate given the user is frustrated and unable to access their account. The summary accurately captures the core issue in English. Requiring human assistance is reasonable for account access issues that may involve password resets or account verification."
+    },
+    {
+      "id": "msg-031",
+      "pass": true,
+      "reasoning": "All triage fields are accurate and logical. The category 'Support' is appropriate for a service outage issue. Urgency 'High' is correct given the user reports complete service unavailability with 503 errors across everything, an active ongoing incident started 10 minutes ago. Sentiment 'Negative' accurately reflects the user's frustrated, urgent tone. The summary concisely captures the core issue. Requiring human intervention is the right call for a potential service outage affecting all functionality, which typically warrants escalation to on-call engineers or incident response teams."
+    },
+    {
+      "id": "msg-021",
+      "pass": true,
+      "reasoning": "The triage output is accurate and sensible. The category 'Support' is appropriate for an account/plan modification request. 'High' urgency reflects the user's explicit statement of being in a rush and wanting immediate action. 'Neutral' sentiment is reasonable as the user is not expressing frustration or satisfaction, just a transactional request under time pressure. The summary correctly captures the key elements including the presence of sensitive PII (email, phone, card details). RequiresHuman=true is the correct and responsible decision given the sensitive financial/account changes being requested and the inclusion of actual payment card information, which should not be processed automatically by a triage bot."
+    },
+    {
+      "id": "msg-003",
+      "pass": true,
+      "reasoning": "The system correctly identified this as Spam - it exhibits classic spam characteristics including unsolicited promotion, unrealistic promises (10,000 followers in 24h), urgency tactics (limited spots), call-to-action (DM me 'GROW'), and hashtag stuffing. Urgency is appropriately set to Low since this is spam rather than a genuine customer issue. Neutral sentiment is reasonable as the message is promotional rather than expressing positive or negative customer emotion. The summary accurately captures the key elements. Setting requiresHuman to false is correct as spam messages don't warrant human agent attention."
+    },
+    {
+      "id": "msg-014",
+      "pass": true,
+      "reasoning": "The triage output is accurate and well-reasoned. The category of 'Bug' is appropriate as the primary issue is a reproducible bug (recurring task duplication on mobile), with the feature request being secondary. Urgency of 'High' is justified given the user has 6 duplicate tasks affecting their workflow and has explicitly threatened to switch to a competitor, indicating churn risk. Sentiment of 'Negative' correctly reflects the user's frustration and dissatisfaction. The summary accurately captures both issues and the churn threat concisely. RequiresHuman=true is sensible given the churn threat and multi-issue complexity."
+    },
+    {
+      "id": "msg-009",
+      "pass": true,
+      "reasoning": "The system correctly identified this as a prompt injection/jailbreak attempt rather than a legitimate customer request. Categorizing it as 'Spam' is appropriate since it's a malicious/fraudulent message. Flagging it as 'High' urgency makes sense because prompt injection attempts targeting financial operations (refunds) are security threats that need immediate attention. 'Negative' sentiment is reasonable given the adversarial nature of the message. The summary accurately describes what the message is attempting. Requiring human review is the correct response for a potential security incident. All triage decisions are sound and defensible."
+    },
+    {
+      "id": "msg-035",
+      "pass": true,
+      "reasoning": "The triage output is accurate and logical. The category 'Support' is appropriate as this involves account management (cancellation and refund request). 'Medium' urgency is reasonable - it's not an emergency but requires timely attention as it involves a cancellation and financial transaction. 'Negative' sentiment correctly reflects the customer's dissatisfaction with the service not meeting expectations. The summary accurately captures the key points: cancellation request, refund for current month, and reason (unmet expectations). 'requiresHuman: true' is correct since subscription cancellations and refunds typically require human intervention for verification and processing. Overall, all fields are well-reasoned and consistent with the original French message."
+    },
+    {
+      "id": "msg-026",
+      "pass": false,
+      "reasoning": "The categorization as 'Support' is appropriate and the summary is accurate. However, 'urgency' should be 'Low' rather than 'Medium' - this is a simple UI navigation question with no business-critical impact, data loss, or service outage. The sentiment is reasonably assessed as 'Neutral'. The main concern is 'requiresHuman: true', which seems unnecessary for this type of straightforward how-to question that could easily be handled by an automated response or knowledge base article about inviting teammates. A bot or help documentation could resolve this without human intervention."
+    },
+    {
+      "id": "msg-006",
+      "pass": true,
+      "reasoning": "The triage output is accurate and logical. Category 'Support' is appropriate (billing issue is a support matter, though 'Billing' might be more precise, 'Support' is still acceptable). Urgency 'Critical' is well-justified given three unanswered contacts, a duplicate charge, a 48-hour ultimatum, and threats of chargeback and cancellation. Sentiment 'Negative' correctly reflects the customer's frustration and anger. The summary accurately captures all key facts: duplicate May charge, no prior response after three attempts, and the threatened actions. RequiresHuman=true is the correct call given the escalation risk, financial dispute, and cancellation threat from a two-year customer."
+    },
+    {
+      "id": "msg-015",
+      "pass": true,
+      "reasoning": "The system correctly identified this as spam/test input with low urgency, neutral sentiment, and no need for human intervention. The summary accurately describes the message as a form test with random characters and placeholder text. All fields are logically consistent and appropriate for this type of input."
+    },
+    {
+      "id": "msg-028",
+      "pass": true,
+      "reasoning": "The triage is accurate and logical. Category 'Sales' is correct as this is a pre-purchase inquiry. Urgency 'High' is reasonable since this is a prospective customer at a decision point who may be lost if not responded to quickly. Sentiment 'Neutral' fits the straightforward, businesslike tone of the message. The summary accurately captures the essence of the inquiry. requiresHuman=true is appropriate as API/integration questions require specific technical and sales knowledge to answer properly."
+    },
+    {
+      "id": "msg-007",
+      "pass": true,
+      "reasoning": "The triage output is accurate and logical. The category 'Feature Request' is correct as the user is asking for dark mode and keyboard shortcuts. Urgency 'Low' is appropriate since this is a feature request with no critical issue or time sensitivity. Sentiment 'Positive' is well-justified given the user explicitly expresses love for the product and mentions daily usage over months, despite minor complaints. The summary accurately captures the key points. Not requiring human intervention is sensible for a straightforward feature request."
+    },
+    {
+      "id": "msg-016",
+      "pass": true,
+      "reasoning": "All triage fields are accurate and logical. Category 'Sales' is correct as this is a purchase inquiry with a specific seat count. Urgency 'High' is justified because the prospect has a hard blocker (HIPAA/BAA requirement) and is ready to discuss pricing, making timely response critical to not losing the deal. Sentiment 'Positive' is appropriate given the constructive, forward-looking tone and expressed readiness to purchase. The summary accurately captures the key elements: healthcare provider, HIPAA compliance, BAA, and 50-seat pricing discussion. requiresHuman 'true' is correct as compliance questions and pricing negotiations require human expertise."
+    },
+    {
+      "id": "msg-039",
+      "pass": true,
+      "reasoning": "All triage fields are accurate and well-reasoned. The category 'Bug' is appropriate for a data migration issue causing missing records. 'Critical' urgency is justified given the potential permanent loss of a year's worth of project data. 'Negative' sentiment correctly captures the user's panic and distress. The summary accurately reflects the core issue. Requiring human intervention is the right call for a sensitive data loss scenario that needs immediate investigation and reassurance."
+    }
+  ]
+}
