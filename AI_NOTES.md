@@ -2,7 +2,7 @@
 
 I used GitHub copilot (via VS Code) throughout the project for code generation and Porject scaffolding.
 
-** Where AI accelerated me:**
+**Where AI accelerated me:**
 - **Architecture Brainstorming:** I used Copilot to map and  validate architecture thoughts. 
 - **Architecture to Code:** I used Copilot to map my architecture thoughts to code. For example, the "LLM-as-a-judge" evaluation architecture was easily turned into an evaluation ( `eval.js` ) script. 
 - **Scaffolding:** It wrote the initial boilerplate for processing files (`fs.readFile`), setting up the `zod` schema, and generating the simple HTTP server/Tailwind HTML for the dashboard. This saved me hours of typing boilerplate out.
